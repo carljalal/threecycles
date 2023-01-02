@@ -1,0 +1,32 @@
+<html>
+<body>
+<script>
+
+list1 = {rate:2000,words:["a","b","c"]};
+list2 = {rate:1000,words:["1","2","3"]};
+list3 = {rate:500,words:["x","y","z"]};
+
+cycleIndex = (o) => {
+    o.currentWordIndex++;
+    if(o.currentWordIndex >= o.words.length) o.currentWordIndex = 0;
+}
+
+cycleOnce = (o) => {
+    o.div.textContent = o.words[o.currentWordIndex];
+    cycleIndex(o);
+}
+
+cycleList = (o) => {
+    o.currentWordIndex = 0;
+    o.div = document.createElement("div");
+    document.body.append(o.div);
+    o.interval = setInterval(() => {cycleOnce(o)}, o.rate)
+}
+
+cycleList(list1);
+cycleList(list2);
+cycleList(list3);
+
+</script>
+</body>
+</html>
