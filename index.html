@@ -2,9 +2,11 @@
 <body>
 <script>
 
-list1 = {rate:2000,words:["a","b","c"]};
-list2 = {rate:1000,words:["1","2","3"]};
-list3 = {rate:500,words:["x","y","z"]};
+list1 = {rate:1500,words:["hard","easy","moderate"]};
+list2 = {rate:1000,words:["soft","rough","smooth"]};
+list3 = {rate:600,words:["unusual","common","occasional"]};
+list4 = {rate:2000,words:["hard","easy","moderate"]};
+list5 = {rate:2300,words:["left","right","middle"]};
 
 cycleIndex = (o) => {
     o.currentWordIndex++;
@@ -26,6 +28,7 @@ cycleList = (o) => {
 cycleList(list1);
 cycleList(list2);
 cycleList(list3);
+cycleList(list5);
 
 </script>
 </body>
